@@ -17,12 +17,62 @@ class Body extends StatelessWidget {
           color: kPrimaryColor,
           child: Row(
             children: [
-              FillOutlineButton(press: () {}, text: "Recent Message"),
+              Text(
+                "Recent",
+                style: TextStyle(fontSize: 20),
+              ),
               SizedBox(width: kDefaultPadding),
-              FillOutlineButton(
-                press: () {},
-                text: "Active",
-                isFilled: false,
+              SizedBox(width: kDefaultPadding),
+              SizedBox(width: kDefaultPadding),
+              SizedBox(width: kDefaultPadding),
+              Text(
+                "Broadcast List",
+                style: TextStyle(fontSize: 20),
+              ),
+              SizedBox(width: kDefaultPadding),
+              SizedBox(width: kDefaultPadding),
+              SizedBox(width: kDefaultPadding),
+              SizedBox(width: kDefaultPadding),
+              Text(
+                "Groups",
+                style: TextStyle(fontSize: 20),
+              ),
+            ],
+          ),
+        ),
+        Container(
+          alignment: Alignment.center,
+          margin: EdgeInsets.symmetric(horizontal: kDefaultPadding),
+          padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
+          height: 54,
+          decoration: BoxDecoration(
+            color: Colors.green[200],
+            borderRadius: BorderRadius.circular(20),
+            boxShadow: [
+              BoxShadow(
+                offset: Offset(0, 10),
+                blurRadius: 50,
+                color: kPrimaryColor.withOpacity(0.23),
+              ),
+            ],
+          ),
+          child: Row(
+            children: <Widget>[
+              Expanded(
+                child: TextField(
+                  onChanged: (value) {},
+                  decoration: InputDecoration(
+                    hintText: "Search",
+                    hintStyle: TextStyle(
+                      color: Colors.black,
+                    ),
+                    enabledBorder: InputBorder.none,
+                    focusedBorder: InputBorder.none,
+                    // surffix isn't working properly  with SVG
+                    // thats why we use row
+                    // suffixIcon: SvgPicture.asset("assets/icons/search.svg"),
+                  ),
+                ),
               ),
             ],
           ),

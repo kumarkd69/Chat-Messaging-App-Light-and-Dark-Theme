@@ -38,26 +38,36 @@ class _ChatsScreenState extends State<ChatsScreen> {
       },
       items: [
         BottomNavigationBarItem(icon: Icon(Icons.messenger), label: "Chats"),
-        BottomNavigationBarItem(icon: Icon(Icons.people), label: "People"),
+        BottomNavigationBarItem(icon: Icon(Icons.explore), label: "Explore"),
+        BottomNavigationBarItem(icon: Icon(Icons.camera), label: "Camera"),
         BottomNavigationBarItem(icon: Icon(Icons.call), label: "Calls"),
-        BottomNavigationBarItem(
-          icon: CircleAvatar(
-            radius: 14,
-            backgroundImage: AssetImage("assets/images/user_2.png"),
-          ),
-          label: "Profile",
-        ),
+        BottomNavigationBarItem(icon: Icon(Icons.settings), label: "Settings"),
       ],
     );
   }
 
   AppBar buildAppBar() {
     return AppBar(
-      automaticallyImplyLeading: false,
-      title: Text("Chats"),
-      actions: [
+      leading: IconButton(
+        icon: Icon(Icons.ac_unit),
+        iconSize: 30.0,
+        color: Colors.white,
+        onPressed: () {},
+      ),
+      title: Text(
+        'Chats',
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: 28.0,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+      elevation: 0.0,
+      actions: <Widget>[
         IconButton(
-          icon: Icon(Icons.search),
+          icon: Icon(Icons.accessibility_rounded),
+          iconSize: 30.0,
+          color: Colors.white,
           onPressed: () {},
         ),
       ],
